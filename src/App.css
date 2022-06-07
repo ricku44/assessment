@@ -1,0 +1,85 @@
+  span {
+    background-color: white;
+    color: black !important;
+    border-radius: 16.5px;
+    transition: font-size 0.25s ease 0s;
+    padding: 0 8px 0 6px;
+    margin: 0 5px;
+    cursor: text;
+  }
+
+  select {
+    border-radius: 10px;
+    padding: 1px 5px 3px !important;
+    margin: 0 5px !important;
+  }
+
+  span:focus {
+    z-index: 2;
+  }
+
+  use {
+    pointer-events:none;
+  }
+
+  .mx-2 {
+    cursor: default;
+  }
+
+  .line{
+    width: 1px;
+    height: 100px;
+    background-color: black;
+    position: absolute;
+    transform-origin: 0 0;
+  }
+
+  .fit-content {
+    width: fit-content;
+    cursor: grab;
+    align-items: center;
+  }
+
+  .hideSvg {
+    padding: 0 10px;
+  }
+
+  .hideSvg > svg:first-child, .hideSvg > svg:last-child {
+    display: none;
+  }
+
+  .width100 {
+    width: 100%;
+  }
+
+  .collapsible {
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  .active, .collapsible:hover {
+    background-color: #555;
+  }
+  
+  .collapsible:after {
+    content: '\25BC';
+    color: white;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\25B2";
+  }
+  
+  .content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+  .con {
+    max-height: fit-content !important;
+  }
