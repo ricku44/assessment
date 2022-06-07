@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Sidebar from "./components/Sidebar";
 import MidArea from "./components/MidArea";
 import PreviewArea from "./components/PreviewArea";
-import './App.css';
+import './Apps.css';
 import Icon from "./components/Icon";
 
 export default function App() {
