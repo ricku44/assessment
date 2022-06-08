@@ -5,18 +5,18 @@ const sliderContent = [{
     text: "Motion",
     color: "blue",
     content: [{
-      text1: 'Move ',
+      text1: 'move ',
       text2: <span contentEditable="true" suppressContentEditableWarning="true">10</span>,
       text3:' steps',
       onClick: 'moveEvent'
     },{
-      text1: 'Turn ',
+      text1: 'turn ',
       text2: <Icon name="redo" size={15} className="text-white mx-2" />,
       text3: <span contentEditable="true" suppressContentEditableWarning="true">15</span>,
       text4: ' degrees',
       onClick: 'rightEvent'
     },{
-      text1: 'Turn ',
+      text1: 'turn ',
       text2: <Icon name="undo" size={15} className="text-white mx-2" />,
       text3: <span contentEditable="true" suppressContentEditableWarning="true">15</span>,
       text4: ' degrees',
@@ -47,41 +47,101 @@ const sliderContent = [{
         </select>
       ),
       onClick: 'randomEventTime'
+    },{
+      text1: 'glide',
+      text2: <span contentEditable="true" suppressContentEditableWarning="true">1</span>,
+      text3: ' secs to x :',
+      text4: <span contentEditable="true" suppressContentEditableWarning="true">0</span>,
+      text5: ' y :',
+      text6: <span contentEditable="true" suppressContentEditableWarning="true">0</span>,
+      onClick: 'xyEventTime'
+    },,{
+      text1: 'point in direction ',
+      text2: <span contentEditable="true" suppressContentEditableWarning="true">90</span>,
+      onClick: '90Event'
+    },{
+      text1: 'point towards',
+      text2: (
+        <select className="bg-blue-700">
+          <option value="random position">random position</option>
+          <option value="mouse-pointer">mouse-pointer</option>
+        </select>
+      ),
+      onClick: 'randomAngleEvent'
+    },{
+      text1: 'change x by ',
+      text2: <span contentEditable="true" suppressContentEditableWarning="true">10</span>,
+      onClick: 'xMoveEvent'
+    },{
+      text1: 'set x to ',
+      text2: <span contentEditable="true" suppressContentEditableWarning="true">10</span>,
+      onClick: 'xSetEvent'
+    },{
+      text1: 'change y by ',
+      text2: <span contentEditable="true" suppressContentEditableWarning="true">10</span>,
+      onClick: 'yMoveEvent'
+    },{
+      text1: 'set y to ',
+      text2: <span contentEditable="true" suppressContentEditableWarning="true">10</span>,
+      onClick: 'ySetEvent'
     }]
   },{
     text: "Looks",
     color: "green",
     content: [{
-      text1: 'Move 10 steps',
-      onClick: 'moveEvent'
+      text1: 'say',
+      text2: <span contentEditable="true" suppressContentEditableWarning="true">Hello!</span>,
+      text3: ' for',
+      text4: <span contentEditable="true" suppressContentEditableWarning="true">2</span>,
+      text5: 'seconds',
+      onClick: 'helloEventTime'
     },{
-      text1: 'Turn ',
-      text2: <Icon name="undo" size={15} className="text-white mx-2" />,
-      text3: '15',
-      text4: ' degrees',
-      onClick: 'leftEvent'
+      text1: 'think',
+      text2: <span contentEditable="true" suppressContentEditableWarning="true">Hello!</span>,
+      onClick: 'helloEvent'
     },{
-      text1: 'Turn ',
-      text2: <Icon name="redo" size={15} className="text-white mx-2" />,
-      text3: '15 degrees',
-      onClick: 'rightEvent'
+      text1: 'say',
+      text2: <span contentEditable="true" suppressContentEditableWarning="true">Hmm!</span>,
+      text3: ' for',
+      text4: <span contentEditable="true" suppressContentEditableWarning="true">2</span>,
+      text5: 'seconds',
+      onClick: 'helloEventTime'
+    },{
+      text1: 'think',
+      text2: <span contentEditable="true" suppressContentEditableWarning="true">Hmm!</span>,
+      onClick: 'helloEvent'
+    },{
+      text1: 'show',
+      onClick: 'showEvent'
+    },{
+      text1: 'hide',
+      onClick: 'hideEvent'
     }]
   },{
     text: "Control",
     color: "purple",
     content: [{
-      text1: 'Move 10 steps',
-      onClick: 'moveEvent'
+      text1: 'wait',
+      text2: <span contentEditable="true" suppressContentEditableWarning="true">1</span>,
+      text3: ' seconds',
+      onClick: 'waitEvent'
     },{
-      text1: 'Turn ',
-      text2: <Icon name="undo" size={15} className="text-white mx-2" />,
-      text3: '15 degrees',
-      onClick: 'leftEvent'
+      text1: 'repeat ',
+      text2: <span contentEditable="true" suppressContentEditableWarning="true">10</span>,
+      onClick: 'repeatEvent'
     },{
-      text1: 'Turn ',
-      text2: <Icon name="redo" size={15} className="text-white mx-2" />,
+      text1: 'forever ',
       text3: '15 degrees',
-      onClick: 'rightEvent'
+      onClick: 'foreverEvent'
+    },{
+      text1: 'wait until',
+      text2: <span contentEditable="true" suppressContentEditableWarning="true">1</span>,
+      text3: ' seconds',
+      onClick: 'waitEvent'
+    },{
+      text1: 'repeat until',
+      text2: <span contentEditable="true" suppressContentEditableWarning="true">10</span>,
+      onClick: 'repeatEvent'
     }]
   },{
     text: "Events",

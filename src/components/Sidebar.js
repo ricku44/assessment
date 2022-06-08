@@ -5,7 +5,7 @@ import Icon from "./Icon";
 export default function Sidebar(props) {
 
   return (
-    <div className="w-96 flex-none h-full flex flex-col items-start p-2 border-r border-gray-200" onDrop={props.drop} onDragOver={e=>e.preventDefault()}>
+    <div className="w-80 flex-none h-full flex flex-col items-start p-2 border-r border-gray-200" onDrop={props.drop} onDragOver={e=>e.preventDefault()}>
       {sliderContent.map((item,i)=>{
         return (
           <Fragment key={"slider"+item.text+i}>
@@ -25,6 +25,7 @@ export default function Sidebar(props) {
                       {innerItem.text3}
                       {innerItem.text4}
                       {innerItem.text5}
+                      {innerItem.text6}
                       <Icon name="plus-circle" size="12" className="text-white mx-2"/>
                   </div>
                 );
