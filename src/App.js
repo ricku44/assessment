@@ -81,7 +81,7 @@ export default function App() {
           transform(canvas.x*2*Math.random(),canvas.y*2*Math.random(),0,0,1);
         break;
       case "xyEvent":
-        transform(canvas.x+b[0],canvas.y+b[1],0,0,1);
+        transform(canvas.x+parseInt(b[0]),canvas.y+parseInt(b[1]),0,0,1);
         break;
       case "randomEventTime":
         if(b[2]=="mouse-pointer")
@@ -90,7 +90,7 @@ export default function App() {
           transform(canvas.x*2*Math.random(),canvas.y*2*Math.random(),0,b[0],1);
         break;
       case "xyEventTime":
-        transform(canvas.x+b[1],canvas.y+b[3],0,b[0],1);
+        transform(canvas.x+parseInt(b[1]),canvas.y+parseInt(b[3]),0,b[0],1);
         break;
       case "90Event":
         transform(0,0,b[0]-90,0,0,1);
