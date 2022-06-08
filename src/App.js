@@ -228,9 +228,12 @@ export default function App() {
 
   return (
     <div className="bg-blue-100 font-sans parent">
-      <div className="pt-2 pb-2 pl-96 pr-96">
-        <Icon name="stop" className="text-red-600 mx-2 inline-block float-right" />
-        <Icon name="flag" className="text-green-600 mx-2 inline-block float-right" />
+      <div className="pt-2 pb-2 pl-96 pr-24">
+        <span className="inline-block float-right">
+          <a href="https://github.com/ricku44/assessment" target="_blank" referrerPolicy="no-referrer" className="text-blue-700" style={{textDecoration:"underline"}}>Source Code</a>
+        </span>
+        <Icon name="stop" className="text-red-600 mx-2 inline-block float-right" style={{marginRight:"20%"}}/>
+        <Icon name="flag" className="text-green-600 mx-2 inline-block float-right"/>
         <span className="inline-block">{"Mouse Position - x: " + mouse.x + " y: "+mouse.y}</span>
       </div>
       <div className="h-screen overflow-hidden flex flex-row" onMouseMove={e=>setMouse({x:e.screenX, y:e.screenY})} onDragOver={e=>setMouse({x:e.pageX, y:e.pageY})}>

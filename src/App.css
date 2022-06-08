@@ -105,5 +105,21 @@ use {
 }
 
 .h-screen {
-  height: 94.55vh !important;
+  height: 94vh !important;
+}
+
+.videoActive {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%) scale(2);
+}
+
+.activeDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100% !important;
+  background: #000000cc;
 }
