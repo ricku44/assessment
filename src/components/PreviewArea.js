@@ -11,7 +11,7 @@ export default function PreviewArea({refs}) {
       <span id="spanTxt" style={{position:"absolute"}}></span>
       </div>
       <div className={"bg-white "+(expand?"activeDiv":"")} style={{height:"30%"}} onClick={()=>setExpand(!expand)}>
-        <video autoPlay muted className={(expand?"activeDiv":"")}  onClick={()=>setExpand(!expand)}>
+        <video autoPlay muted loop className={(expand?"activeDiv":"")}  onClick={()=>setExpand(!expand)}>
           <source src={video} type="video/mp4" />
         </video>
       </div>
