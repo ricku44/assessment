@@ -19,14 +19,14 @@ export default function Sidebar(props) {
                     onClick={props.onClick}
                     title={innerItem.onClick}
                     draggable="true" onDragStart={props.drag}>
-                      <Icon name="minus-circle" size="12" className="text-white mx-2"/>
+                      <Icon name="minus-circle" size="16" className="text-white mx-2"/>
                       {innerItem.text1}
                       {innerItem.text2}
                       {innerItem.text3}
                       {innerItem.text4}
                       {innerItem.text5}
                       {innerItem.text6}
-                      <Icon name="plus-circle" size="12" className="text-white mx-2"/>
+                      <Icon name="plus-circle" size="16" className="text-white mx-2"/>
                   </div>
                 );
               })}

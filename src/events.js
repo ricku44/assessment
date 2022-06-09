@@ -6,19 +6,19 @@ const sliderContent = [{
     color: "blue",
     content: [{
       text1: 'move ',
-      text2: <span contentEditable="true" suppressContentEditableWarning="true">10</span>,
+      text2: <input type="number" defaultValue="10" />,
       text3:' steps',
       onClick: 'moveEvent'
     },{
       text1: 'turn ',
       text2: <Icon name="redo" size={15} className="text-white mx-2" />,
-      text3: <span contentEditable="true" suppressContentEditableWarning="true">15</span>,
+      text3: <input type="number" defaultValue="15" />,
       text4: ' degrees',
       onClick: 'rightEvent'
     },{
       text1: 'turn ',
       text2: <Icon name="undo" size={15} className="text-white mx-2" />,
-      text3: <span contentEditable="true" suppressContentEditableWarning="true">15</span>,
+      text3: <input type="number" defaultValue="15" />,
       text4: ' degrees',
       onClick: 'leftEvent'
     },{
@@ -32,13 +32,13 @@ const sliderContent = [{
       onClick: 'randomEvent'
     },{
       text1: 'go to x :',
-      text2: <span contentEditable="true" suppressContentEditableWarning="true">0</span>,
+      text2: <input type="number" defaultValue="0" />,
       text3: ' y :',
-      text4: <span contentEditable="true" suppressContentEditableWarning="true">0</span>,
+      text4: <input type="number" defaultValue="0" />,
       onClick: 'xyEvent'
     },{
       text1: 'glide',
-      text2: <span contentEditable="true" suppressContentEditableWarning="true">1</span>,
+      text2: <input type="number" defaultValue="1" />,
       text3: ' secs to',
       text4: (
         <select className="bg-blue-700">
@@ -49,15 +49,15 @@ const sliderContent = [{
       onClick: 'randomEventTime'
     },{
       text1: 'glide',
-      text2: <span contentEditable="true" suppressContentEditableWarning="true">1</span>,
+      text2: <input type="number" defaultValue="1" />,
       text3: ' secs to x :',
-      text4: <span contentEditable="true" suppressContentEditableWarning="true">0</span>,
+      text4: <input type="number" defaultValue="0" />,
       text5: ' y :',
-      text6: <span contentEditable="true" suppressContentEditableWarning="true">0</span>,
+      text6: <input type="number" defaultValue="0" />,
       onClick: 'xyEventTime'
     },,{
       text1: 'point in direction ',
-      text2: <span contentEditable="true" suppressContentEditableWarning="true">90</span>,
+      text2: <input type="number" defaultValue="90" />,
       onClick: '90Event'
     },{
       text1: 'point towards',
@@ -70,19 +70,19 @@ const sliderContent = [{
       onClick: 'randomAngleEvent'
     },{
       text1: 'change x by ',
-      text2: <span contentEditable="true" suppressContentEditableWarning="true">10</span>,
+      text2: <input type="number" defaultValue="10" />,
       onClick: 'xMoveEvent'
     },{
       text1: 'set x to ',
-      text2: <span contentEditable="true" suppressContentEditableWarning="true">10</span>,
+      text2: <input type="number" defaultValue="0" />,
       onClick: 'xSetEvent'
     },{
       text1: 'change y by ',
-      text2: <span contentEditable="true" suppressContentEditableWarning="true">10</span>,
+      text2: <input type="number" defaultValue="10" />,
       onClick: 'yMoveEvent'
     },{
       text1: 'set y to ',
-      text2: <span contentEditable="true" suppressContentEditableWarning="true">10</span>,
+      text2: <input type="number" defaultValue="0" />,
       onClick: 'ySetEvent'
     }]
   },{
@@ -90,25 +90,25 @@ const sliderContent = [{
     color: "green",
     content: [{
       text1: 'say',
-      text2: <span contentEditable="true" suppressContentEditableWarning="true">Hello!</span>,
+      text2: <input type="number" defaultValue="Hello!" />,
       text3: ' for',
-      text4: <span contentEditable="true" suppressContentEditableWarning="true">2</span>,
+      text4: <input type="number" defaultValue="1" />,
       text5: 'seconds',
       onClick: 'helloEventTime'
-    },{
-      text1: 'think',
-      text2: <span contentEditable="true" suppressContentEditableWarning="true">Hello!</span>,
-      onClick: 'helloEvent'
     },{
       text1: 'say',
-      text2: <span contentEditable="true" suppressContentEditableWarning="true">Hmm!</span>,
+      text2: <input type="number" defaultValue="Hello!" />,
+      onClick: 'helloEvent'
+    },{
+      text1: 'think',
+      text2: <input type="number" defaultValue="Hmm!" />,
       text3: ' for',
-      text4: <span contentEditable="true" suppressContentEditableWarning="true">2</span>,
+      text4: <input type="number" defaultValue="1" />,
       text5: 'seconds',
       onClick: 'helloEventTime'
     },{
       text1: 'think',
-      text2: <span contentEditable="true" suppressContentEditableWarning="true">Hmm!</span>,
+      text2: <input type="number" defaultValue="Hmm!" />,
       onClick: 'helloEvent'
     },{
       text1: 'show',
@@ -122,12 +122,12 @@ const sliderContent = [{
     color: "purple",
     content: [{
       text1: 'wait',
-      text2: <span contentEditable="true" suppressContentEditableWarning="true">1</span>,
+      text2: <input type="number" defaultValue="1" />,
       text3: ' seconds',
       onClick: 'waitEvent'
     },{
       text1: 'repeat ',
-      text2: <span contentEditable="true" suppressContentEditableWarning="true">10</span>,
+      text2: <input type="number" defaultValue="10" />,
       onClick: 'repeatEvent'
     },{
       text1: 'forever ',
@@ -135,12 +135,12 @@ const sliderContent = [{
       onClick: 'foreverEvent'
     },{
       text1: 'wait until',
-      text2: <span contentEditable="true" suppressContentEditableWarning="true">1</span>,
+      text2: <input type="number" defaultValue="1" />,
       text3: ' seconds',
       onClick: 'waitEvent'
     },{
       text1: 'repeat until',
-      text2: <span contentEditable="true" suppressContentEditableWarning="true">10</span>,
+      text2: <input type="number" defaultValue="10" />,
       onClick: 'repeatEvent'
     }]
   },{

@@ -21,11 +21,24 @@ export default function App() {
   const [canvas,setCanvas] = useState({x:0,y:0});
 
   useEffect(()=>{
+
+    const inputs = document.getElementsByTagName('input');
+    for(let i in inputs) {
+      try{
+        inputs[i].onkeyup = adjust;
+        inputs[i].style.width = ((inputs[i].value.length+2)*8)+'px';
+      }catch(e){}
+    }
+
     const x = (ref.current.parentNode.offsetWidth-ref.current.getAttributeNode('width').nodeValue)/2;
     const y = (ref.current.parentNode.offsetHeight-ref.current.getAttributeNode('height').nodeValue)/2;
     setCanvas({x:x,y:y});
     transform(x,y,0);
   },[]);
+
+  const adjust = e => {
+    e.target.style.width = ((e.target.value.length+2)*8)+'px';
+  }
 
   const expand = e => {
     const allCollapse = document.getElementsByClassName('collapsible');
@@ -49,12 +62,12 @@ export default function App() {
   }
 
   const onEventClick = e => {
-    const x=e.target.getElementsByTagName('span')[0];
-    const x2=e.target.getElementsByTagName('span')[1];
-    const x3=e.target.getElementsByTagName('span')[2];
+    const x=e.target.getElementsByTagName('input')[0];
+    const x2=e.target.getElementsByTagName('input')[1];
+    const x3=e.target.getElementsByTagName('input')[2];
     const y=e.target.getElementsByTagName('select')[0];
     if(x || x2 || x3 || y)
-      action(e.target.title,[x?x.innerHTML:0,x2?x2.innerHTML:0,y?y.value:0,x3?x3.innerHTML:0]);
+      action(e.target.title,[x?x.value:0,x2?x2.value:0,y?y.value:0,x3?x3.value:0]);
     else
       action(e.target.title,[]);
     if(e.target.a)
