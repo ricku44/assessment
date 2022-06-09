@@ -227,7 +227,7 @@ export default function App() {
       if(pointer.y>mPointer.y)
         angle += Math.PI;
       ele.style.height = Math.sqrt(Math.pow(pointer.y-mPointer.y,2)+Math.pow(pointer.x-mPointer.x,2))+'px';
-      ele.style.transform = "translate(6px,6px) rotate("+angle+"rad)";
+      ele.style.transform = "translate(8px,8px) rotate("+angle+"rad)";
       document.getElementsByClassName('parent')[0].appendChild(ele);
     }
   }
